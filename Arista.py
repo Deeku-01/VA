@@ -27,11 +27,11 @@ try:
             elif "Updating" in use.decode():
                 print("[+] updating.....".title())
                 print(use.decode())
-                print("\u001b[32m[+] Cyberonix is UPDATED To Latest Version")
+                print("\u001b[32m[+] Arista is UPDATED To Latest Version")
                 try:
-                    subprocess.run('cyberonix',shell=True, check = True)
+                    subprocess.run('Arista',shell=True, check = True)
                 except Exception as err:
-                    os.system("python3 cyberonix.py")
+                    os.system("python3 Arista.py")
                 exit()
             else:
                 print("[-] Something went wrong....".title())
@@ -44,7 +44,7 @@ try:
             time.sleep(i)
     def starting():
         parser = argparse.ArgumentParser(
-            description="Cyberonix is a complete resource hub for Cyber Security Community. Our aim is to make this tool an 1 stop solution for all the Hackers out there to get resources of various topics in Cyber Security. We will keep updating this tool & adding new & updated resources on the go.",
+            description="Arista is a complete resource hub for Cyber Security Community. Our aim is to make this tool an 1 stop solution for all the Hackers out there to get resources of various topics in Cyber Security. We will keep updating this tool & adding new & updated resources on the go.",
         )
         main_args = parser.add_argument_group('Main Arguments')
             
@@ -304,10 +304,10 @@ try:
         there=there.decode()
         if "root" not in there:
             try:
-                subprocess.run('sudo cyberonix',shell=True, check = True)
+                subprocess.run('sudo Arista',shell=True, check = True)
             except Exception as err:
-                os.system("sudo python3 cyberonix.py")
-            # os.system("sudo cyberonix")
+                os.system("sudo python3 Arista.py")
+            # os.system("sudo Arista")
             exit()
         while True:
             os.system("clear")

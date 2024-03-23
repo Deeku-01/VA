@@ -2,7 +2,7 @@
 import os
 import subprocess
 from main.tools import banner,colors
-import cyberonix
+import Arista
 
 def exit_program():
     os.system("clear")
@@ -28,17 +28,17 @@ try:
         f = open("run.sh", "w")
         f.write("#!/bin/bash")
         f.write("\n")
-        f.write(f'cd {there[0]} && python3 cyberonix.py "$@"')
+        f.write(f'cd {there[0]} && python3 Arista.py "$@"')
         f.close()
         os.system("chmod +x *")
-        os.system("sudo mv run.sh /usr/bin/cyberonix")
-        os.system("sudo mv cyberonix.1 /usr/local/man/man1/")
+        os.system("sudo mv run.sh /usr/bin/Arista")
+        os.system("sudo mv Arista.1 /usr/local/man/man1/")
         finish()
     def finish():
         os.system("clear")
         banner.main()
         banner.attack("Setup Completed")
-        cyberonix.main()
+        Arista.main()
     if __name__ == "__main__":
         main()
 except KeyboardInterrupt:
